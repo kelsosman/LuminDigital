@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -470,7 +469,6 @@
           </svg>
         </a>
       </div>
-    </div>
 
     <div class="hero-right fade-in fi3">
       <div class="photo-area">
@@ -499,8 +497,6 @@
       </div>
     </div>
   </div>
-</div>
-</div>
 
 <!-- WHY LUMIN -->
 <div class="section-wrap" id="why" style="scroll-margin-top:70px;">
