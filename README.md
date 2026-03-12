@@ -38,7 +38,7 @@
       border-bottom: 1px solid var(--border);
     }
     .nav-logo { font-weight: 700; font-size: 1.05rem; color: var(--accent); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
     .nav-links a {
       color: var(--muted); text-decoration: none;
       font-size: 0.78rem; font-weight: 400;
@@ -55,7 +55,7 @@
     .nav-links a.active::after {
       content: '';
       position: absolute;
-      bottom: -4px; left: 0; right: 0;
+      bottom: -6px; left: 0; right: 0;
       height: 2px;
       background: var(--accent);
       border-radius: 2px;
@@ -64,7 +64,7 @@
     /* HERO */
     .hero {
       min-height: 100vh; display: flex; align-items: center;
-      padding: 7rem 2.5rem 4rem; position: relative; overflow: hidden;
+      padding: 5.5rem 2.5rem 4rem; position: relative; overflow: hidden;
     }
     .hero-bg {
       position: absolute; inset: 0;
@@ -469,6 +469,7 @@
           </svg>
         </a>
       </div>
+    </div>
 
     <div class="hero-right fade-in fi3">
       <div class="photo-area">
@@ -497,6 +498,8 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 
 <!-- WHY LUMIN -->
 <div class="section-wrap" id="why" style="scroll-margin-top:70px;">
