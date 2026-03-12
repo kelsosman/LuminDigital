@@ -842,7 +842,11 @@
     <div class="skill-group">
       <div class="skill-group-title">Junior League of Atlanta &nbsp;·&nbsp; 2022–2023</div>
       <div style="font-size:0.88rem; color:var(--muted); line-height:1.75; margin-bottom:0.85rem;">
-        Member of the Junior League of Atlanta — an organization of women committed to promoting voluntarism and developing the potential of women while improving communities.
+         Member of the Junior League of Atlanta — an organization of women committed to promoting voluntarism and developing the potential of women while improving communities.
+      </div>
+      <div class="skill-group-title">Young Women Leaders Forum &nbsp;·&nbsp; 2023–2025</div>
+      <div style="font-size:0.88rem; color:var(--muted); line-height:1.75; margin-bottom:0.85rem;">
+        Member of YWLF — a women's group focused on mid-career women achieving leadership success as their fully authentic selves through transformational professional development, impactful peer-to-peer sharing and ongoing community conversations.
       </div>
       <div class="skill-pills">
         <span class="pill">Community Development</span>
@@ -877,7 +881,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>Kelsey Osman · Product Ma
+  <p>Kelsey Osman · Product Manager
 <script>
   const navLinks = document.querySelectorAll('.nav-links a');
   const sectionIds = ['why','story','skills','human','volunteer','connect'];
@@ -901,5 +905,4 @@
     if (el) observer.observe(el);
   });
 </script>
-</body>
-</html>
+
