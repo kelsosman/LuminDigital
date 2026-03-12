@@ -497,12 +497,6 @@
           <div class="stat-number">5+</div>
           <div class="stat-label">Fintech integrations shipped</div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <div class="scroll-arrow"></div>
   </div>
 </div>
 
