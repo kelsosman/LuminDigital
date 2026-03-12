@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -150,7 +150,7 @@
     .hero-cta:hover svg { transform: translateX(4px); }
 
     /* SECTION SHARED */
-    .section-wrap { max-width: 1200px; margin: 0 auto; padding: 5rem 2.5rem 1rem; }
+    .section-wrap { max-width: 1200px; margin: 0 auto; padding: 5rem 2.5rem 1rem; scroll-margin-top: 70px; }
     .section-label {
       display: flex; align-items: center; gap: 0.75rem;
       font-size: 0.7rem; font-weight: 700;
@@ -358,17 +358,42 @@
     /* RESPONSIVE */
     @media (max-width: 950px) {
       .hero-content { grid-template-columns: 1fr; gap: 2.5rem; }
-      .hero-right { align-items: flex-start; }
+      .hero-right { align-items: flex-start; width: 100%; }
+      .hero-stats { width: 100%; }
       .why-grid { grid-template-columns: 1fr 1fr; }
       .skills-grid { grid-template-columns: 1fr; }
       .personal-grid { grid-template-columns: 1fr; }
       .card-container { padding: 2rem; }
+      .closing-inner { padding: 2.5rem 1.5rem; }
+      .timeline::before { left: 80px; }
+      .tl-item { grid-template-columns: 80px 1fr; gap: 1.25rem; }
+      .tl-dot { left: 73px; }
+      .section-wrap { padding: 4rem 1.5rem 1rem; }
     }
     @media (max-width: 600px) {
       .why-grid { grid-template-columns: 1fr; }
-      nav { padding: 1rem 1.25rem; }
+      nav { padding: 0.85rem 1.25rem; }
       .nav-links { display: none; }
-      h1 { font-size: 2.6rem; }
+      h1 { font-size: 2.4rem; }
+      h2 { font-size: 1.6rem; }
+      .hero { padding: 6rem 1.25rem 3rem; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .stat-number { font-size: 1.6rem; }
+      .photo-circle { width: 120px; height: 120px; }
+      .section-wrap { padding: 3.5rem 1.25rem 1rem; }
+      .card-container { padding: 1.5rem; }
+      .closing-inner { padding: 2rem 1.25rem; }
+      .tl-item { grid-template-columns: 70px 1fr; gap: 1rem; }
+      .timeline::before { left: 70px; }
+      .tl-dot { left: 63px; }
+      .tl-year { font-size: 0.68rem; padding-right: 1rem; }
+      .hero-cta { font-size: 0.82rem; padding: 0.75rem 1.25rem; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.25rem; }
+    }
+    @media (max-width: 400px) {
+      h1 { font-size: 2rem; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -382,6 +407,7 @@
     <li><a href="#story">My Story</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#human">Beyond Work</a></li>
+    <li><a href="#volunteer">Giving Back</a></li>
     <li><a href="#connect">Let's Talk</a></li>
   </ul>
 </nav>
@@ -398,17 +424,22 @@
       </div>
       <h1 class="fade-in fi2">
         <span class="name-line">Hi, I'm</span>
-        <span class="name-line">Kelsey</span>
-        <span class="title-line">Osman.</span>
+        <span class="title-line">Kelsey.</span>
       </h1>
       <p class="hero-desc fade-in fi3">
         I'm a product manager with <strong>7+ years in digital banking</strong> who genuinely loves this industry, cares deeply about the people using these products, and is ready to bring all of that to a team that's building something <strong>truly worth building</strong>.
       </p>
-      <div class="fade-in fi4">
+      <div class="fade-in fi4" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
         <a href="https://www.linkedin.com/in/KelseyOsman" target="_blank" rel="noopener" class="hero-cta">
           Connect on LinkedIn
           <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="/cdn-cgi/l/email-protection#c6ada3aab5a3bfe8a9b5aba7a8f2f4f386a1aba7afaae8a5a9ab" class="hero-cta" style="background:var(--surface); border:1px solid var(--border); color:var(--accent);">
+          Send Me an Email
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+            <path d="M2 4h12v9H2zM2 4l6 5 6-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
       </div>
@@ -448,7 +479,7 @@
 </div>
 
 <!-- WHY LUMIN -->
-<div class="section-wrap" id="why">
+<div class="section-wrap" id="why" style="scroll-margin-top:70px;">
   <div class="section-label">Why I'm Here</div>
   <h2>Lumin isn't just <em>a next job</em>.<br>It's the right one.</h2>
   <p class="section-intro">
@@ -513,9 +544,11 @@
       <div class="tl-content">
         <h3>GTM Strategy & Sales Enablement</h3>
         <div class="tl-company">Candescent (NCR Voyix) · Atlanta, GA</div>
-        <p>Moved into a dedicated GTM and sales enablement role — building programs from the ground up across a portfolio of 8 products. In just a few months: launched a net-new sales onboarding program, stood up a sales support channel that fields product questions and protects PM bandwidth, kicked off a Lunch &amp; Learn series, delivered product training aligned to active marketing campaigns, and built a scalable sales training framework now in active content development.
+        <p>Moved into a dedicated GTM and sales enablement role with a mandate to <strong style="color:var(--text)">build the entire sales enablement engine from scratch</strong> — something that didn't exist before — across Candescent's full portfolio of Digital Banking and Branch solutions.
         <br><br>
-        Work cross-functionally with Sales, Marketing, Product, and Customer Success to develop consistent messaging, competitive positioning, objection handling, and launch readiness — translating complex product functionality into clear, client-facing narratives that drive adoption and revenue.</p>
+        In just a few months: launched a net-new sales onboarding program, stood up a dedicated sales support channel that fields product questions and protects PM bandwidth, kicked off a Lunch &amp; Learn series, delivered product training aligned to active marketing campaigns, and built a scalable sales training framework now in active content development.
+        <br><br>
+        Work cross-functionally with Sales, Marketing, Product, and Customer Success to develop consistent messaging, competitive positioning, objection handling, and launch readiness — translating complex product functionality into clear, client-facing narratives that drive adoption and revenue across the entire organization.</p>
         <div class="tl-tags">
           <span class="tl-tag">GTM Strategy &amp; Execution</span>
           <span class="tl-tag">Sales Enablement</span>
@@ -613,8 +646,10 @@
       <div class="tl-content">
         <h3>Marketing Coordinator</h3>
         <div class="tl-company" style="color:var(--muted);">Headway Marketing · Experiential Agency — GM / Jack Morton Partner</div>
-        <p>Supported GM experiential marketing programs within the Jack Morton agency network. Built foundational skills in client-facing event execution, marketing operations, and building materials that drove dealership engagement and brand visibility — the start of a career built around connecting brands to real people.</p>
+        <p>Supported GM experiential marketing programs within the Jack Morton agency network. Executed and grew Chevrolet's free youth baseball and soccer programs — expanding the markets they reached and connecting the brand to families and communities in a meaningful way. Built foundational skills in client-facing execution, marketing operations, and GTM materials that drove dealership engagement and brand visibility.</p>
         <div class="tl-tags">
+          <span class="tl-tag grey">Youth Community Programs</span>
+          <span class="tl-tag grey">Program Growth</span>
           <span class="tl-tag grey">Event Marketing</span>
           <span class="tl-tag grey">Client Engagement</span>
           <span class="tl-tag grey">GTM Assets</span>
@@ -714,10 +749,10 @@
   <div class="personal-grid">
     <div class="personal-text">
       <p>
-        At my core, I believe the best products come from <em>genuinely caring about people</em> — the end users trying to manage their financial lives, the financial institutions trying to serve their communities, and the teammates building alongside you. That's not a value on a slide deck. It's how I've worked every single day.
+        At my core, I believe the best products come from <em>genuinely caring about people</em> — the end users trying to manage their financial lives, the financial institutions trying to serve their communities, and the teammates building alongside you. Financial wellness isn't just a product category to me; it's something that affects real families every day, and I take that seriously. That's not a value on a slide deck. It's how I've worked every single day.
       </p>
       <p>
-        I stay curious on purpose. Every morning starts with a <strong>fintech or product podcast</strong> — it's just part of how I'm wired. I also invest in continuing education whenever something worth diving into comes along. I don't wait for the industry to come to me.
+        I stay curious on purpose. Most mornings start with <strong>the news and markets</strong> before veering into behavioral science and fintech podcasts — it's just how I'm wired. I also invest in continuing education whenever something worth diving into comes along. I don't wait for the industry to come to me.
       </p>
       <p>
         I stay grounded through movement — <strong>yoga 4 days a week</strong>, running a few times a week, and 8 half marathons behind me with plans for a 9th this year. There's something about training that maps perfectly to product: consistency, patience, and knowing that showing up every day is how you get somewhere great.
@@ -741,8 +776,8 @@
       <div class="p-card">
         <div class="p-card-icon">🤝</div>
         <div class="p-card-text">
-          <h4>A people person — genuinely</h4>
-          <p>I build real relationships with clients, advisory boards, partners, and teammates. People trust me because I show up as a human first, every time.</p>
+          <h4>A connector — professionally and personally</h4>
+          <p>I genuinely enjoy building relationships across teams, clients, and communities. People trust me because I show up as a human first, every time — inside work and out.</p>
         </div>
       </div>
       <div class="p-card">
@@ -753,18 +788,61 @@
         </div>
       </div>
       <div class="p-card">
+        <div class="p-card-icon">🏆</div>
+        <div class="p-card-text">
+          <h4>Competitive in the best way</h4>
+          <p>I like winning — for the team, for the client, for the user. That drive shows up in the metrics, in the follow-through, and in never leaving a problem half-solved.</p>
+        </div>
+      </div>
+      <div class="p-card">
         <div class="p-card-icon">💬</div>
         <div class="p-card-text">
-          <h4>Storyteller at the core</h4>
-          <p>Experiential marketing roots mean I can bridge the business case and the human experience. The "why" is never an afterthought in anything I present or build.</p>
+          <h4>I build where nothing existed</h4>
+          <p>Whether it's a 0→1 product, a sales enablement engine, or a community program — I'm energized by ambiguity. I like bringing structure to chaos and leaving things better than I found them.</p>
         </div>
       </div>
       <div class="p-card">
         <div class="p-card-icon">📍</div>
         <div class="p-card-text">
           <h4>Denver, CO · Remote-first · Open to travel</h4>
-          <p>Currently fully remote and loving it — also excited for the 10–20% travel that comes with working closely with clients and a great team.</p>
+          <p>Currently fully remote and loving it. Open to travel up to 10–20% for the right team moments — client visits, offsites, and the kind of in-person time that actually matters.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- VOLUNTEER -->
+<div class="section-wrap" id="volunteer">
+  <div class="section-label">Giving Back</div>
+  <h2>Community isn't just <em>a nice-to-have</em>.</h2>
+  <p class="section-intro">
+    Outside of work, I've spent years investing in communities — leading programs, serving on boards, and showing up for causes I believe in. It's the same muscle I bring to work every day: connect, build, make it better.
+  </p>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-title">Hands On Atlanta &nbsp;·&nbsp; 2012–2025</div>
+      <div style="font-size:0.88rem; color:var(--muted); line-height:1.75; margin-bottom:0.85rem;">
+        Over 13 years of volunteer engagement with one of Atlanta's leading civic organizations — from hands-on community service to formal leadership roles.
+      </div>
+      <div class="skill-pills">
+        <span class="pill hi">Civic Leadership Program</span>
+        <span class="pill hi">Young Professionals Board</span>
+        <span class="pill">Built internal training guides for customer support</span>
+        <span class="pill">Long-term volunteer (13 years)</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Junior League of Atlanta &nbsp;·&nbsp; 2022–2023</div>
+      <div style="font-size:0.88rem; color:var(--muted); line-height:1.75; margin-bottom:0.85rem;">
+        Member of the Junior League of Atlanta — an organization of women committed to promoting voluntarism and developing the potential of women while improving communities.
+      </div>
+      <div class="skill-pills">
+        <span class="pill">Community Development</span>
+        <span class="pill">Women's Leadership</span>
+        <span class="pill">Civic Engagement</span>
       </div>
     </div>
   </div>
@@ -794,4 +872,4 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>Kelsey Osman · Product Management Leader · Digital Banking & FinTech</p>
+  <p>Kelsey Osman · Product Ma
