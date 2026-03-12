@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -46,6 +47,7 @@
       letter-spacing: 0.07em; text-transform: uppercase;
       transition: color 0.2s;
     }
+    .hamburger { display: none; }
     .nav-links a:hover { color: var(--accent); }
     .nav-links a.active {
       color: var(--accent);
@@ -384,10 +386,38 @@
     @media (max-width: 600px) {
       .why-grid { grid-template-columns: 1fr; }
       nav { padding: 0.85rem 1.25rem; }
-      .nav-links { display: none; }
+      .nav-links { display: none; flex-direction: column; gap: 0; }
+      .nav-links.open {
+        display: flex;
+        position: fixed; top: 56px; left: 0; right: 0;
+        background: rgba(11,15,20,0.97);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+        padding: 0.5rem 0 1rem;
+        z-index: 99;
+      }
+      .nav-links.open li { width: 100%; }
+      .nav-links.open a {
+        display: block; padding: 0.85rem 1.5rem;
+        font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.04);
+      }
+      .hamburger {
+        display: flex; flex-direction: column; justify-content: space-between;
+        width: 26px; height: 18px; background: none; border: none;
+        cursor: pointer; padding: 0; z-index: 101;
+      }
+      .hamburger span {
+        display: block; width: 100%; height: 2px;
+        background: var(--accent); border-radius: 2px;
+        transition: transform 0.25s, opacity 0.25s;
+      }
+      .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+      .hamburger.open span:nth-child(2) { opacity: 0; }
+      .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
       h1 { font-size: 2.4rem; }
       h2 { font-size: 1.6rem; }
-      .hero { padding: 6rem 1.25rem 3rem; }
+      .hero { padding: 7rem 1.25rem 3rem; }
+      .hero-eyebrow { margin-top: 0.5rem; }
       .hero-stats { grid-template-columns: 1fr 1fr; }
       .stat-number { font-size: 1.6rem; }
       .photo-circle { width: 120px; height: 120px; }
@@ -413,14 +443,17 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Kelsey Osman</div>
-  <ul class="nav-links">
-    <li><a href="#why">Why Lumin</a></li>
-    <li><a href="#story">My Story</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#human">Beyond Work</a></li>
-    <li><a href="#volunteer">Giving Back</a></li>
-    <li><a href="#connect">Let's Talk</a></li>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#why" onclick="closeMenu()">Why Lumin</a></li>
+    <li><a href="#story" onclick="closeMenu()">My Story</a></li>
+    <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+    <li><a href="#human" onclick="closeMenu()">Beyond Work</a></li>
+    <li><a href="#volunteer" onclick="closeMenu()">Giving Back</a></li>
+    <li><a href="#connect" onclick="closeMenu()">Let's Talk</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -835,14 +868,14 @@
       <div class="skill-pills">
         <span class="pill hi">Civic Leadership Program</span>
         <span class="pill hi">Young Professionals Board</span>
-        <span class="pill">Built training for customer support</span>
+        <span class="pill">Built internal training guides for customer support</span>
         <span class="pill">Long-term volunteer (13 years)</span>
       </div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">Junior League of Atlanta &nbsp;·&nbsp; 2022–2023</div>
       <div style="font-size:0.88rem; color:var(--muted); line-height:1.75; margin-bottom:0.85rem;">
-         Member of the Junior League of Atlanta — an organization of women committed to promoting voluntarism and developing the potential of women while improving communities.
+        Member of the Junior League of Atlanta — an organization of women committed to promoting voluntarism and developing the potential of women while improving communities.
       </div>
       <div class="skill-pills">
         <span class="pill">Community Development</span>
@@ -850,10 +883,10 @@
         <span class="pill">Civic Engagement</span>
       </div>
     </div>
-  </p>
-  <div class="skills-grid">
+  </div>
+  <div class="skills-grid" style="margin-top:1.1rem;">
     <div class="skill-group">
-       <div class="skill-group-title">Young Women Leaders Forum &nbsp;·&nbsp; 2023–2025</div>
+      <div class="skill-group-title">Young Women Leaders Forum &nbsp;·&nbsp; 2023–2025</div>
       <div style="font-size:0.88rem; color:var(--muted); line-height:1.75; margin-bottom:0.85rem;">
         Member of YWLF — a women's group focused on mid-career women achieving leadership success as their fully authentic selves through transformational professional development, impactful peer-to-peer sharing and ongoing community conversations.
       </div>
@@ -861,6 +894,7 @@
         <span class="pill">Community Development</span>
         <span class="pill">Women's Leadership</span>
         <span class="pill">Civic Engagement</span>
+      </div>
     </div>
   </div>
 </div>
@@ -890,7 +924,27 @@
 <!-- FOOTER -->
 <footer>
   <p>Kelsey Osman · Product Manager
+</footer>
 <script>
+  function toggleMenu() {
+    const menu = document.getElementById('navLinks');
+    const btn = document.getElementById('hamburger');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('navLinks').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+  // Close on outside tap
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('navLinks');
+    const btn = document.getElementById('hamburger');
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
   const navLinks = document.querySelectorAll('.nav-links a');
   const sectionIds = ['why','story','skills','human','volunteer','connect'];
 
@@ -913,4 +967,3 @@
     if (el) observer.observe(el);
   });
 </script>
-
