@@ -764,7 +764,7 @@
 <!-- BEYOND WORK -->
 <div class="section-wrap" id="human">
   <div class="section-label">Beyond the Resume</div>
-  <h2>Products are built by <em>people</em>.<br>Here's a bit of mine.</h2>
+  <h2>Products are built by <em>people</em>.<br>Here's a bit of about me.</h2>
   <p class="section-intro">
     I think the best PMs bring their whole selves to the work — the curiosity, the drive, and the genuine warmth for the people on the other side of the screen. Here's what that looks like for me.
   </p>
@@ -908,7 +908,6 @@
 <!-- FOOTER -->
 <footer>
   <p>Kelsey Osman · Product Manager
-</footer>
 <script>
   function toggleMenu() {
     const menu = document.getElementById('navLinks');
