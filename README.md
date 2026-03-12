@@ -905,7 +905,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>Kelsey Osman · Product Ma
+  <p>Kelsey Osman · Product Manager
 </footer>
 <script>
   function toggleMenu() {
@@ -949,5 +949,3 @@
     if (el) observer.observe(el);
   });
 </script>
-</body>
-</html>
