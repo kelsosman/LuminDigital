@@ -436,7 +436,7 @@
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-        <a href="/cdn-cgi/l/email-protection#c6ada3aab5a3bfe8a9b5aba7a8f2f4f386a1aba7afaae8a5a9ab" class="hero-cta" style="background:var(--surface); border:1px solid var(--border); color:var(--accent);">
+        <a href="kelsey.osman425@gmail.com" class="hero-cta" style="background:var(--surface); border:1px solid var(--border); color:var(--accent);">
           Send Me an Email
           <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
             <path d="M2 4h12v9H2zM2 4l6 5 6-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -865,11 +865,11 @@
       </svg>
     </a>
     <div style="margin-top:1.5rem; font-size:0.83rem; color:var(--muted);">
-      📍 Denver, CO &nbsp;·&nbsp; Open to 10–20% travel &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="460d232a35233f6809352b272872747306212b272f2a6825292b">[email&#160;protected]</a> &nbsp;·&nbsp; (919) 423-8515
+      📍 Denver, CO &nbsp;·&nbsp; Open to 10–20% travel &nbsp;·&nbsp; <a href="kelsey.osman425@gmail.com" class="__cf_email__" data-cfemail="kelsey.osman425@gmail.com">[email]</a> &nbsp;·&nbsp; (919) 423-8515
     </div>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>Kelsey Osman · Product Ma
+  <p>Kelsey Osman · Product Manager
