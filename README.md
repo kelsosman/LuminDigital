@@ -447,12 +447,6 @@
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-        <a href="/cdn-cgi/l/email-protection#c6ada3aab5a3bfe8a9b5aba7a8f2f4f386a1aba7afaae8a5a9ab" class="hero-cta" style="background:var(--surface); border:1px solid var(--border); color:var(--accent);">
-          Send Me an Email
-          <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
-            <path d="M2 4h12v9H2zM2 4l6 5 6-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
       </div>
     </div>
 
