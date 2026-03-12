@@ -499,7 +499,6 @@
     </div>
   </div>
 </div>
-</div>
 
 <!-- WHY LUMIN -->
 <div class="section-wrap" id="why" style="scroll-margin-top:70px;">
