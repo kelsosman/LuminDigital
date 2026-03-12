@@ -7,7 +7,6 @@
   </div>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kelsey Osman — Product Leader for Lumin Digital</title>
   <style>
     :root {
       --bg: #0b0f14;
@@ -342,19 +341,6 @@
     }
     footer p { font-size: 0.78rem; color: var(--muted); }
     footer a { color: var(--accent); text-decoration: none; font-size: 0.78rem; font-weight: 700; }
-
-    /* SCROLL HINT */
-    .scroll-hint {
-      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
-      display: flex; flex-direction: column; align-items: center; gap: 0.38rem;
-      color: var(--muted); font-size: 0.66rem;
-      font-family: "Arial Narrow", Arial, sans-serif;
-      letter-spacing: 0.1em; text-transform: uppercase;
-    }
-    .scroll-arrow {
-      width: 17px; height: 17px;
-      border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted);
-      transform: rotate(45deg); animation: bounceDown 1.5s infinite;
     }
     @keyframes bounceDown {
       0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.45; }
