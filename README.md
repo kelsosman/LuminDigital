@@ -835,7 +835,7 @@
       <div class="skill-pills">
         <span class="pill hi">Civic Leadership Program</span>
         <span class="pill hi">Young Professionals Board</span>
-        <span class="pill">Built internal training guides for customer support</span>
+        <span class="pill">Built training for customer support</span>
         <span class="pill">Long-term volunteer (13 years)</span>
       </div>
     </div>
@@ -844,7 +844,16 @@
       <div style="font-size:0.88rem; color:var(--muted); line-height:1.75; margin-bottom:0.85rem;">
          Member of the Junior League of Atlanta — an organization of women committed to promoting voluntarism and developing the potential of women while improving communities.
       </div>
-      <div class="skill-group-title">Young Women Leaders Forum &nbsp;·&nbsp; 2023–2025</div>
+      <div class="skill-pills">
+        <span class="pill">Community Development</span>
+        <span class="pill">Women's Leadership</span>
+        <span class="pill">Civic Engagement</span>
+      </div>
+    </div>
+  </p>
+  <div class="skills-grid">
+    <div class="skill-group">
+       <div class="skill-group-title">Young Women Leaders Forum &nbsp;·&nbsp; 2023–2025</div>
       <div style="font-size:0.88rem; color:var(--muted); line-height:1.75; margin-bottom:0.85rem;">
         Member of YWLF — a women's group focused on mid-career women achieving leadership success as their fully authentic selves through transformational professional development, impactful peer-to-peer sharing and ongoing community conversations.
       </div>
@@ -852,7 +861,6 @@
         <span class="pill">Community Development</span>
         <span class="pill">Women's Leadership</span>
         <span class="pill">Civic Engagement</span>
-      </div>
     </div>
   </div>
 </div>
