@@ -1,12 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <a></a>
-  <div>
-    <div>
-    </div>
-  </div>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelsey Osman — Product Leader for Lumin Digital</title>
   <style>
     :root {
       --bg: #0b0f14;
@@ -68,7 +65,7 @@
     /* HERO */
     .hero {
       min-height: 100vh; display: flex; align-items: center;
-      padding: 8rem 2.5rem 4rem; position: relative; overflow: hidden;
+      padding: 7rem 2.5rem 4rem; position: relative; overflow: hidden;
     }
     .hero-bg {
       position: absolute; inset: 0;
@@ -341,9 +338,8 @@
     }
     footer p { font-size: 0.78rem; color: var(--muted); }
     footer a { color: var(--accent); text-decoration: none; font-size: 0.78rem; font-weight: 700; }
-    }
-    @keyframes bounceDown {
-      0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.45; }
+
+    
       50% { transform: rotate(45deg) translateY(5px); opacity: 1; }
     }
 
@@ -352,7 +348,10 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .fade-in { opacity: 0; animation: fadeUp 0.65s ease forwards; }
+    .fade-in {
+      opacity: 1;
+      animation: fadeUp 0.65s ease both;
+    }
     .fi1 { animation-delay: 0.1s; }
     .fi2 { animation-delay: 0.25s; }
     .fi3 { animation-delay: 0.4s; }
@@ -461,7 +460,7 @@
         <span class="title-line">Kelsey.</span>
       </h1>
       <p class="hero-desc fade-in fi3">
-        I'm a product manager with <strong>7+ years in digital banking</strong> who genuinely loves this industry, cares deeply about the people using these products, and is ready to bring all of that to a team that's building something <strong>truly worth building</strong>.
+        I'm a product manager with <strong>7+ years in digital banking</strong> who genuinely loves this industry, cares deeply about the people using these products, and is ready to bring all of that to a team that's building something truly worth building.
       </p>
       <div class="fade-in fi4" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
         <a href="https://www.linkedin.com/in/KelseyOsman" target="_blank" rel="noopener" class="hero-cta">
@@ -497,7 +496,10 @@
           <div class="stat-number">5+</div>
           <div class="stat-label">Fintech integrations shipped</div>
         </div>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <!-- WHY LUMIN -->
@@ -907,7 +909,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>Kelsey Osman · Product Manager
+  <p>Kelsey Osman · Product Ma
 </footer>
 <script>
   function toggleMenu() {
@@ -951,3 +953,5 @@
     if (el) observer.observe(el);
   });
 </script>
+</body>
+</html>
