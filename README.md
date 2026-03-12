@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -48,6 +47,18 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--accent); }
+    .nav-links a.active {
+      color: var(--accent);
+      position: relative;
+    }
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
 
     /* HERO */
     .hero {
@@ -436,7 +447,7 @@
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-        <a href="kelsey.osman425@gmail.com" class="hero-cta" style="background:var(--surface); border:1px solid var(--border); color:var(--accent);">
+        <a href="/cdn-cgi/l/email-protection#c6ada3aab5a3bfe8a9b5aba7a8f2f4f386a1aba7afaae8a5a9ab" class="hero-cta" style="background:var(--surface); border:1px solid var(--border); color:var(--accent);">
           Send Me an Email
           <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
             <path d="M2 4h12v9H2zM2 4l6 5 6-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -865,11 +876,36 @@
       </svg>
     </a>
     <div style="margin-top:1.5rem; font-size:0.83rem; color:var(--muted);">
-      📍 Denver, CO &nbsp;·&nbsp; Open to 10–20% travel &nbsp;·&nbsp; <a href="kelsey.osman425@gmail.com" class="__cf_email__" data-cfemail="kelsey.osman425@gmail.com">[email]</a> &nbsp;·&nbsp; (919) 423-8515
+      📍 Denver, CO &nbsp;·&nbsp; Open to 10–20% travel
     </div>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>Kelsey Osman · Product Manager
+  <p>Kelsey Osman · Product Ma
+<script>
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sectionIds = ['why','story','skills','human','volunteer','connect'];
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+
+  sectionIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+</script>
+</body>
+</html>
